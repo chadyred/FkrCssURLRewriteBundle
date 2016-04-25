@@ -119,7 +119,7 @@ class CssURLRewriteFilter implements FilterInterface
                     
                      $request = $this->kernel->getContainer()->get('request_stack')->getCurrentRequest();
                      
-                } elseif (method_exists($this->container, 'isScopeActive') && $this->container->isScopeActive('request')) {
+                } elseif (method_exists($this->kernel->getContainer(), 'isScopeActive') && $this->kernel->getContainer()->isScopeActive('request')) {
                     
                      $request = $this->kernel->getContainer()->get('request');
                      
